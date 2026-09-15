@@ -1,0 +1,26 @@
+.cube-face-shine {
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 80%
+  );
+
+  background-size: 250% 100%;
+  background-position: -100% 0;
+}
+
+#magicCube.is-lit .cube-face-shine {
+  opacity: 1;
+  animation: cube-shine 1.8s ease-in-out infinite;
+}
+
+@keyframes cube-shine {
+  0% {
+    background-position: -100% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
