@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+body {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  background: #111414;
+  color: #f6f6f1;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+/* =========================
+   KIVO HERO — NON-TAILWIND
+   ========================= */
+
+.kivo-hero-em {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #35d6c0;
+  background: none;
+}
+
+.kivo-k-sheen {
+  animation: kivo-k-sheen 5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.kivo-k-sheen {
+  opacity: 0.2;
+  transform: translateX(-40px);
+}
+
+@keyframes kivo-k-sheen {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: translateX(-40px);
+  }
+
+  45% {
+    opacity: 0.9;
+    transform: translateX(25px);
+  }
+
+  70% {
+    opacity: 0.35;
+    transform: translateX(55px);
+  }
+}
+
+/*
+ * O anel orbital pertence ao wrapper do K.
+ * É mantido fora do JSX como pseudo-elemento para
+ * preservar exatamente o comportamento original.
+ */
+#liquidK::before {
+  content: "";
+  position: absolute;
+  inset: 15%;
+  border: 1px solid rgba(53, 214, 192, 0.08);
+  border-radius: 50%;
+  transform: rotate(-22deg) scaleX(0.72);
+  box-shadow: 0 0 80px rgba(53, 214, 192, 0.08);
+  animation: kivo-orbit-pulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes kivo-orbit-pulse {
+  50% {
+    transform: rotate(22deg) scaleX(0.84);
+    opacity: 0.5;
+  }
+}
+
+@keyframes kivo-float-orbit {
+  50% {
+    transform: translate3d(-14px, -20px, 0) scale(1.35);
+  }
+}
+
+@keyframes kivo-float-orbit-reverse {
+  50% {
+    transform: translate3d(-14px, -20px, 0) scale(1.35);
+  }
+}
+
+@keyframes kivo-float-orbit-slow {
+  50% {
+    transform: translate3d(-14px, -20px, 0) scale(1.35);
+  }
+}
+
+@keyframes kivo-cue-move {
+  0% {
+    transform: scaleY(0.3);
+    transform-origin: top;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  100% {
+    transform: scaleY(0.3);
+    transform-origin: bottom;
+  }
+}
+
+/* Respeita a mesma lógica do HTML original */
+@media (prefers-reduced-motion: reduce) {
+  .kivo-k-sheen,
+  #liquidK::before {
+    animation: none !important;
+  }
+
+  #liquidK {
+    transition: none !important;
+  }
+}
