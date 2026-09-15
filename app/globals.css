@@ -2,6 +2,9 @@
 
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Space Grotesk", system-ui, sans-serif;
   background: #111414;
@@ -292,5 +295,52 @@ body {
   50% {
     opacity: 1;
     transform: scale(1.12);
+  }
+}
+
+/*MENU*/
+
+.nav-inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -160%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent,
+    rgba(255, 255, 255, 0.75),
+    transparent
+  );
+  animation: nav-shine 6.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes nav-shine {
+  0% {
+    left: -160%;
+  }
+
+  40% {
+    left: 160%;
+  }
+
+  100% {
+    left: 160%;
+  }
+}
+
+.nav-links {
+  display: flex;
+}
+
+@media (max-width: 840px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
   }
 }

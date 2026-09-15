@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 
 export default function ComoTrabajamos() {
   const solarStageRef = useRef<HTMLDivElement>(null);
