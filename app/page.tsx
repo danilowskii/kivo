@@ -4,6 +4,7 @@ import ComoTrabajamos from "./components/ComoTrabajamos";
 import AntesDespues from "./components/AntesDespues";
 import ElSistema from "./components/ElSistema/ElSistema";
 import Cases from "./components/Cases/Cases";
+import Servicios from "./components/Servicios/Servicios";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <AntesDespues />
       <ElSistema />
       <Cases />
+      <Servicios />
     </div>
   );
 }

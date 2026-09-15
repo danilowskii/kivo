@@ -1,0 +1,40 @@
+.service-card-shine::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(53, 214, 192, 0.8) 50%,
+    transparent 80%
+  );
+
+  background-size: 250% 100%;
+  background-position: -100% 0;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+
+  pointer-events: none;
+}
+
+.service-card-shine:hover::before {
+  opacity: 1;
+  animation: service-card-shine 5s ease-in-out infinite;
+}
+
+@keyframes service-card-shine {
+  to {
+    background-position: 200% 0;
+  }
+}
