@@ -101,6 +101,7 @@ export default function ComoTrabajamos() {
               <span
                 className="solar-instruction-text"
                 data-text="Pasa el cursor sobre el panel solar"
+                data-text-mobile="Haz click sobre el panel solar"
               >
                 Pasa el cursor sobre el panel solar
               </span>
@@ -161,17 +162,6 @@ export default function ComoTrabajamos() {
                 cursor-pointer
                 "
             />
-
-            <span
-              className="
-                pointer-events-none absolute right-4 top-[14px]
-                text-[1.1rem]
-                drop-shadow-[0_0_6px_rgba(255,209,102,0.9)]
-                animate-[solar-pulse_2.2s_infinite]
-                "
-            >
-              ☀
-            </span>
           </div>
 
           <div className="solar-house-strip bg-[#071010] px-5 pb-5 pt-0">

@@ -162,11 +162,13 @@ body {
   fill: rgba(228, 214, 17, 0.35);
   opacity: 0;
   transition: opacity 0.6s ease;
+  filter: blur(10px);
 }
 
 /* Lâmpadas ativadas somente pelo hover da placa */
 .solar-stage:has(.solar-hit:hover) #solarSvg .bulb-glow {
   opacity: 1;
+  filter: blur(10px);
 }
 
 /* Janelas inicialmente apagadas */
@@ -335,6 +337,12 @@ body {
   display: flex;
 }
 
+/*CASES*/
+.wrap {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
 @media (max-width: 840px) {
   .nav-links {
     display: none;
@@ -342,5 +350,14 @@ body {
 
   .nav-links.open {
     display: flex;
+  }
+
+  .solar-instruction-text {
+    font-size: 0; /* Oculta el texto original de la etiqueta */
+  }
+
+  .solar-instruction-text::before {
+    content: attr(data-text-mobile); /* Muestra el texto para celular */
+    font-size: 1rem; /* Devuelve el tamaño de fuente normal (ajusta según necesites) */
   }
 }

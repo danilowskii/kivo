@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import ComoTrabajamos from "./components/ComoTrabajamos";
 import AntesDespues from "./components/AntesDespues";
 import ElSistema from "./components/ElSistema/ElSistema";
+import Cases from "./components/Cases/Cases";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ComoTrabajamos />
       <AntesDespues />
       <ElSistema />
+      <Cases />
     </div>
   );
 }
