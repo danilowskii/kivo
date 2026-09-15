@@ -195,36 +195,12 @@ export default function Hero() {
           max-[700px]:pr-0
         "
       >
-        <div
-          className="
-            mb-7 flex items-center gap-[14px]
-            text-[.72rem]
-            uppercase
-            tracking-[.24em]
-            text-[#83938F]
-            max-[700px]:gap-[9px]
-            max-[700px]:text-[.61rem]
-          "
-        >
-          <span>KIVO</span>
-
-          <i
-            className="
-              h-px w-[38px]
-              bg-[#35D6C0]
-              shadow-[0_0_12px_rgba(53,214,192,.5)]
-            "
-          />
-
-          <span>ESTUDIO CREATIVO</span>
-        </div>
-
         <h1
           className="
             relative z-[2]
             m-0
-            max-w-[820px]
-            text-[clamp(2.8rem,5.9vw,6.5rem)]
+            max-w-[620px]
+            text-[clamp(2.4rem,5.5vw,6.1rem)]
             font-semibold
             leading-[.96]
             tracking-[-.055em]
