@@ -334,31 +334,6 @@ export default function Hero() {
         <span className="text-[#35D6C0]">ES</span>
         <span>2026</span>
       </div>
-
-      {/* Scroll cue */}
-      <div
-        className="
-          absolute right-1/2 bottom-7 z-[2]
-          flex translate-x-1/2
-          flex-col items-center gap-[10px]
-          text-[.62rem]
-          tracking-[.22em]
-          text-[#52615E]
-          max-[700px]:right-6
-          max-[700px]:bottom-5
-          max-[700px]:translate-x-0
-        "
-      >
-        <span>SCROLL</span>
-
-        <span
-          className="
-            h-[46px] w-px
-            bg-[linear-gradient(#35D6C0,transparent)]
-            animate-kivo-cue-move
-          "
-        />
-      </div>
     </section>
   );
 }

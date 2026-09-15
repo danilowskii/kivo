@@ -66,7 +66,7 @@ export default function Cases() {
             "ease-in-out",
             message.who === "bot"
               ? "self-start bg-white/[0.09] text-[#D7DBDA] rounded-bl-[3px]"
-              : "self-end bg-gradient-to-r from-[#35D6C0] to-[#9B7FE5] text-white rounded-br-[3px]",
+              : "self-end bg-gradient-to-r from-[#289183] to-[#18665c] text-white rounded-br-[3px]",
           ].join(" ");
 
           bubble.textContent = message.text;
@@ -240,7 +240,7 @@ export default function Cases() {
                   className="
                     absolute left-4 right-4 bottom-[-70px]
                     rounded-[12px]
-                    bg-gradient-to-r from-[#35D6C0] to-[#9B7FE5]
+                    bg-gradient-to-r from-[#289183] to-[#18665c]
                     px-[14px] py-3
                     text-[0.8rem] text-white
                     shadow-[0_10px_24px_-8px_rgba(14,124,102,0.6)]
@@ -306,7 +306,7 @@ export default function Cases() {
           <div
             className="
               relative flex items-center justify-center
-              bg-[linear-gradient(150deg,rgba(14,124,102,0.08),rgba(108,92,231,0.10))]
+              bg-[linear-gradient(150deg,rgba(14,124,102,0.08),rgba(0, 255, 0, 1))]
               p-[34px]
               md:order-2
             "
@@ -432,7 +432,7 @@ export default function Cases() {
                       my-[14px_4px]
                       text-[1.7rem] font-bold
                       tracking-tight
-                      bg-gradient-to-r from-[#8FFFF0] to-[#C9B9FF]
+                      bg-gradient-to-r from-[#35d6c0] to-[#0e3b35]
                       bg-clip-text text-transparent
                     "
                   >
