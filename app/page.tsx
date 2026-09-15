@@ -1,6 +1,7 @@
+import Menu from "./components/Menu";
 import Hero from "./components/Hero";
 import ComoTrabajamos from "./components/ComoTrabajamos";
-import Menu from "./components/Menu";
+import AntesDespues from "./components/AntesDespues";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Menu />
       <Hero />
       <ComoTrabajamos />
+      <AntesDespues />
     </div>
   );
 }
