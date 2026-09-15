@@ -1,0 +1,109 @@
+.team-stage {
+  position: relative;
+  min-height: 600px;
+}
+
+.team-card-aline {
+  position: absolute;
+  top: 4%;
+  left: 0;
+}
+
+.team-card-danilo {
+  position: absolute;
+  right: 0;
+  bottom: 4%;
+}
+
+.orbit-ring-r1 {
+  animation: team-spin 70s linear infinite;
+}
+
+.orbit-ring-r2 {
+  animation: team-spin 50s linear infinite reverse;
+}
+
+@keyframes team-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+}
+
+.orbit-dot-c1 {
+  width: 12px;
+  height: 12px;
+  background: #35d6c0;
+  box-shadow: 0 0 14px 3px rgba(53, 214, 192, 0.55);
+  transform: translate(-50%, -50%) rotate(35deg) translateY(-280px);
+}
+
+.orbit-dot-c2 {
+  width: 12px;
+  height: 12px;
+  background: #29a796;
+  box-shadow: 0 0 14px 3px rgba(41, 167, 150, 0.55);
+  transform: translate(-50%, -50%) rotate(205deg) translateY(-280px);
+}
+
+.orbit-dot-c3 {
+  width: 9px;
+  height: 9px;
+  background: #ffd166;
+  box-shadow: 0 0 14px 3px rgba(255, 209, 102, 0.55);
+  transform: translate(-50%, -50%) rotate(120deg) translateY(-210px);
+}
+
+.orbit-dot-c4 {
+  width: 9px;
+  height: 9px;
+  background: #8ffff0;
+  box-shadow: 0 0 12px 3px rgba(143, 255, 240, 0.55);
+  transform: translate(-50%, -50%) rotate(300deg) translateY(-210px);
+}
+
+.team-line {
+  fill: none;
+  stroke: url(#teamLineGrad);
+  stroke-width: 0.3;
+  stroke-dasharray: 2.2 1.6;
+  opacity: 0.55;
+  animation: team-line-flow 2.4s linear infinite;
+}
+
+@keyframes team-line-flow {
+  to {
+    stroke-dashoffset: -14;
+  }
+}
+
+@media (max-width: 860px) {
+  .team-stage {
+    min-height: 0;
+    flex-direction: column;
+    gap: 26px;
+    padding: 20px 0;
+  }
+
+  .orbit-ring,
+  .orbit-dot,
+  .team-lines {
+    display: none;
+  }
+
+  .team-card {
+    position: static;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .orbit-center {
+    order: -1;
+  }
+}
