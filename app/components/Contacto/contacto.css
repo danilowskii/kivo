@@ -1,3 +1,8 @@
+.contact-door {
+  transition: transform 1.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: 0.35s;
+}
+
 .contact-door::before {
   content: "";
   position: absolute;
@@ -15,9 +20,4 @@
 
 [data-reveal].in-view .contact-door-right {
   transform: translateX(102%);
-}
-
-.contact-door {
-  transition: transform 1.15s cubic-bezier(0.2, 0.8, 0.2, 1);
-  transition-delay: 0.35s;
 }

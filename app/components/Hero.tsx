@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import Button from "../ui/Button";
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement | null>(null);
@@ -82,7 +83,7 @@ export default function Hero() {
       className="
         relative grid min-h-[100svh] place-items-center overflow-hidden
         bg-[radial-gradient(circle_at_72%_48%,rgba(53,214,192,.075),transparent_34rem),linear-gradient(180deg,#0B0F0F_0%,#111414_100%)]
-        px-6 pb-[92px] pt-[140px]
+        px-6 py-[100px]
         text-left
         max-[900px]:min-h-[900px]
         max-[700px]:flex max-[700px]:items-center
@@ -118,31 +119,31 @@ export default function Hero() {
           ref={liquidKRef}
           id="liquidK"
           className="
-    absolute right-[6vw] top-[78%]
-    h-[min(49vw,620px)] w-[min(49vw,620px)]
-    -translate-y-1/2
-    transition-transform
-    duration-[800ms]
-    [transition-timing-function:cubic-bezier(.16,1,.3,1)]
-    will-change-transform
+            absolute right-[6vw] top-[78%]
+            h-[min(49vw,620px)] w-[min(49vw,620px)]
+            -translate-y-1/2
+            transition-transform
+            duration-[800ms]
+            [transition-timing-function:cubic-bezier(.16,1,.3,1)]
+            will-change-transform
 
-    max-[1200px]:right-[-5vw]
-    max-[1200px]:top-[100%]
-    max-[1200px]:h-[58vw]
-    max-[1200px]:w-[58vw]
+            max-[1200px]:right-[-5vw]
+            max-[1200px]:top-[100%]
+            max-[1200px]:h-[58vw]
+            max-[1200px]:w-[58vw]
 
-    max-[900px]:right-[-9vw]
-    max-[900px]:top-[72%]
-    max-[900px]:h-[75vw]
-    max-[900px]:w-[75vw]
-    max-[900px]:opacity-[.62]
+            max-[900px]:right-[-9vw]
+            max-[900px]:top-[72%]
+            max-[900px]:h-[75vw]
+            max-[900px]:w-[75vw]
+            max-[900px]:opacity-[.62]
 
-    max-[700px]:right-[-28vw]
-    max-[700px]:top-[62%]
-    max-[700px]:h-[105vw]
-    max-[700px]:w-[105vw]
-    max-[700px]:opacity-[.35]
-  "
+            max-[700px]:right-[-28vw]
+            max-[700px]:top-[62%]
+            max-[700px]:h-[105vw]
+            max-[700px]:w-[105vw]
+            max-[700px]:opacity-[.35]
+          "
         >
           <Image
             src="/k-logo.png"
@@ -193,37 +194,37 @@ export default function Hero() {
       {/* Hero copy */}
       <div
         className="
-    relative z-[2]
-    w-full
-    max-w-[1440px]
-    translate-x-0
-    pr-0
-    max-[1200px]:w-[58%]
-    max-[1200px]:mr-auto
-    max-[900px]:w-full
-    max-[900px]:max-w-full
-    max-[700px]:translate-x-0
-  "
+          relative z-[2]
+          w-full
+          max-w-[1440px]
+          translate-x-0
+          pr-0
+          max-[1200px]:w-[58%]
+          max-[1200px]:mr-auto
+          max-[900px]:w-full
+          max-[900px]:max-w-full
+          max-[700px]:translate-x-0
+        "
       >
         <h1
           className="
-    relative z-[2]
-    m-0
-    w-full
-    max-w-[720px]
-    text-balance
-    text-[clamp(2.4rem,5.2vw,6.1rem)]
-    font-semibold
-    leading-[.96]
-    tracking-[-.055em]
-    text-[#F6F6F1]
-    max-[1200px]:max-w-[590px]
-    max-[1200px]:text-[clamp(2.7rem,5.4vw,4.7rem)]
-    max-[900px]:max-w-[620px]
-    max-[900px]:text-[clamp(2.7rem,7vw,5rem)]
-    max-[700px]:max-w-[600px]
-    max-[700px]:text-[clamp(3rem,14vw,5rem)]
-  "
+            relative z-[2]
+            m-0
+            w-full
+            max-w-[720px]
+            text-balance
+            text-[clamp(2.4rem,5.2vw,6.1rem)]
+            font-semibold
+            leading-[.96]
+            tracking-[-.055em]
+            text-[#F6F6F1]
+            max-[1200px]:max-w-[590px]
+            max-[1200px]:text-[clamp(2.7rem,5.4vw,4.7rem)]
+            max-[900px]:max-w-[620px]
+            max-[900px]:text-[clamp(2.7rem,7vw,5rem)]
+            max-[700px]:max-w-[600px]
+            max-[700px]:text-[clamp(3rem,14vw,5rem)]
+          "
         >
           Tu marca puede hacer más.
           <br />
@@ -255,53 +256,15 @@ export default function Hero() {
             gap-4
           "
         >
-          <a
-            href="#contacto"
-            className="
-              inline-flex items-center
-              rounded-full
-              border-0
-              bg-[#35D6C0]
-              px-6 py-[15px]
-              text-[.98rem]
-              font-semibold
-              text-[#071010]
-              shadow-[0_12px_40px_-14px_rgba(53,214,192,.65)]
-              transition-[transform,background,box-shadow]
-              duration-300
-              hover:-translate-y-[3px]
-              hover:bg-[#8FFFF0]
-              hover:shadow-[0_18px_45px_-14px_rgba(53,214,192,.75)]
-            "
-          >
+          <Button href="#contacto" variant="primary">
             Hablemos de tu marca
             <span className="ml-[9px]">↗</span>
-          </a>
+          </Button>
 
-          <a
-            href="#servicios"
-            className="
-              inline-flex items-center
-              rounded-full
-              border
-              border-[rgba(246,246,241,.18)]
-              bg-[rgba(246,246,241,.035)]
-              px-7 py-[15px]
-              text-[.98rem]
-              font-semibold
-              text-[#F6F6F1]
-              backdrop-blur-[12px]
-              transition-[transform,border-color,color,background]
-              duration-300
-              hover:-translate-y-[3px]
-              hover:border-[#35D6C0]
-              hover:bg-[rgba(53,214,192,.05)]
-              hover:text-[#35D6C0]
-            "
-          >
+          <Button href="#servicios" variant="ghost">
             Explorar KIVO
             <span className="ml-[9px]">↓</span>
-          </a>
+          </Button>
         </div>
       </div>
 

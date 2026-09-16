@@ -5,6 +5,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Space Grotesk", system-ui, sans-serif;
   background: #111414;
@@ -120,21 +121,25 @@ body {
 }
 
 /* Área invisível sobre as placas solares */
+
 .solar-hit {
   clip-path: polygon(24% 14%, 75% 14%, 82% 32%, 19% 32%);
 }
 
 /* Imagem iluminada somente quando o mouse está sobre a placa */
+
 .solar-stage:has(.solar-hit:hover) .solar-lit {
   opacity: 1;
 }
 
 /* Brilho somente quando o mouse está sobre a placa */
+
 .solar-stage:has(.solar-hit:hover) .solar-glow {
   opacity: 1;
 }
 
 /* Sparks inicialmente desligados */
+
 #solarSvg .spark {
   fill: none;
   stroke: #ebdc13;
@@ -146,6 +151,7 @@ body {
 }
 
 /* Sparks ativados somente pelo hover da placa solar */
+
 .solar-stage:has(.solar-hit:hover) #solarSvg .spark {
   opacity: 0.9;
   animation: spark-flow 1.1s linear infinite;
@@ -158,6 +164,7 @@ body {
 }
 
 /* Brilho das lâmpadas inicialmente desligado */
+
 #solarSvg .bulb-glow {
   fill: rgba(228, 214, 17, 0.35);
   opacity: 0;
@@ -166,12 +173,14 @@ body {
 }
 
 /* Lâmpadas ativadas somente pelo hover da placa */
+
 .solar-stage:has(.solar-hit:hover) #solarSvg .bulb-glow {
   opacity: 1;
   filter: blur(10px);
 }
 
 /* Janelas inicialmente apagadas */
+
 #solarSvg .window {
   fill: #2a3234;
   stroke: rgba(226, 206, 20, 0.12);
@@ -182,6 +191,7 @@ body {
 }
 
 /* Janelas acesas somente pelo hover da placa */
+
 .solar-stage:has(.solar-hit:hover) #solarSvg .window {
   fill: #eaee0d;
   filter: drop-shadow(0 0 8px rgba(230, 226, 19, 0.55));
@@ -208,7 +218,8 @@ body {
   }
 }
 
-/*EFEITO DE RAIO NA FRASE PASA EL CURSOR NA SECTION COMO TRABAJAMOS*/
+/* EFEITO DE RAIO NA FRASE
+   PASA EL CURSOR NA SECTION COMO TRABALHAMOS */
 
 .solar-instruction {
   display: inline-flex;
@@ -220,6 +231,7 @@ body {
   Texto original:
   permanece sempre visível na cor normal.
 */
+
 .solar-instruction-text {
   position: relative;
   display: inline-block;
@@ -230,20 +242,17 @@ body {
   Camada adicional apenas para criar
   o brilho amarelo sobre as letras.
 */
+
 .solar-instruction-text::after {
   content: attr(data-text);
-
   position: absolute;
   inset: 0;
-
   display: block;
   pointer-events: none;
   white-space: nowrap;
-
   color: transparent;
   font: inherit;
   line-height: inherit;
-
   background: linear-gradient(
     90deg,
     transparent 0%,
@@ -254,15 +263,12 @@ body {
     transparent 57%,
     transparent 100%
   );
-
   background-size: 250% 100%;
   background-repeat: no-repeat;
   background-position: 120% 0;
-
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   animation: solar-text-energy 2.5s linear infinite;
 }
 
@@ -270,6 +276,7 @@ body {
   O símbolo precisa ser inline-block
   para o scale funcionar corretamente.
 */
+
 .solar-lightning {
   display: inline-block;
   color: #ffd166;
@@ -300,7 +307,9 @@ body {
   }
 }
 
-/*MENU*/
+/* =========================
+   MENU
+   ========================= */
 
 .nav-inner::after {
   content: "";
@@ -333,31 +342,22 @@ body {
   }
 }
 
-.nav-links {
-  display: flex;
-}
+/* =========================
+   CASES
+   ========================= */
 
-/*CASES*/
 .wrap {
   width: min(1180px, calc(100% - 48px));
   margin-inline: auto;
 }
 
 @media (max-width: 840px) {
-  .nav-links {
-    display: none;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
   .solar-instruction-text {
-    font-size: 0; /* Oculta el texto original de la etiqueta */
+    font-size: 0;
   }
 
   .solar-instruction-text::before {
-    content: attr(data-text-mobile); /* Muestra el texto para celular */
-    font-size: 1rem; /* Devuelve el tamaño de fuente normal (ajusta según necesites) */
+    content: attr(data-text-mobile);
+    font-size: 1rem;
   }
 }

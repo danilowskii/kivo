@@ -2,6 +2,7 @@
 
 import "./contacto.css";
 import { useEffect } from "react";
+import Button from "@/app/ui/Button";
 
 export default function Contacto() {
   useEffect(() => {
@@ -12,14 +13,12 @@ export default function Contacto() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("in-view");
-
-            // Se quiser que a animação aconteça apenas uma vez:
             observer.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.25,
+        threshold: 0.15,
       },
     );
 
@@ -27,12 +26,12 @@ export default function Contacto() {
 
     return () => observer.disconnect();
   }, []);
+
   return (
     <section
       id="contacto"
       className="
         bg-[#111414]
-        px-0
         pb-[100px]
         pt-[150px]
         text-center
@@ -50,16 +49,15 @@ export default function Contacto() {
             rounded-[28px]
           "
         >
-          {/* CONTEÚDO */}
+          {/* CONTACT BOX */}
           <div
             className="
-              contact-box
               glass
               relative
               rounded-[28px]
               border
               border-[rgba(53,214,192,0.16)]
-              bg-[rgba(246,246,241,0.035)]!
+              bg-[rgba(246,246,241,0.035)]
               px-[46px]
               py-[60px]
             "
@@ -67,7 +65,7 @@ export default function Contacto() {
             <h2
               className="
                 text-[clamp(2.2rem,4vw,4rem)]
-                leading-tight
+                leading-[1]
                 tracking-[-0.05em]
               "
             >
@@ -95,27 +93,19 @@ export default function Contacto() {
                 gap-4
               "
             >
-              <a
-                href="mailto:hola@kivo.agency"
-                className="
-                  btn-primary
-                "
-              >
-                Escribir a hola@kivo.agency
-              </a>
+              {/* PRIMARY BUTTON */}
+              <Button href="mailto:hola@kivo.agency" variant="primary">
+                Escribir a kivoagencia.es@gmail.com
+              </Button>
 
-              <a
-                href="#servicios"
-                className="
-                  btn-ghost
-                "
-              >
+              {/* GHOST BUTTON */}
+              <Button href="#servicios" variant="ghost">
                 Ver paquetes de nuevo
-              </a>
+              </Button>
             </div>
           </div>
 
-          {/* PORTA ESQUERDA */}
+          {/* LEFT DOOR */}
           <div
             className="
               contact-door
@@ -139,7 +129,6 @@ export default function Contacto() {
           >
             <span
               className="
-                door-mark
                 relative
                 font-['Space_Grotesk',sans-serif]
                 text-[1.4rem]
@@ -152,7 +141,7 @@ export default function Contacto() {
             </span>
           </div>
 
-          {/* PORTA DIREITA */}
+          {/* RIGHT DOOR */}
           <div
             className="
               contact-door
@@ -176,7 +165,6 @@ export default function Contacto() {
           >
             <span
               className="
-                door-mark
                 relative
                 font-['Space_Grotesk',sans-serif]
                 text-[1.4rem]
