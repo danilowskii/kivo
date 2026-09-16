@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import StructuredData from "./components/seo/StructuredData";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://SEU-DOMINIO.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://kivoagencia.es";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
