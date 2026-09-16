@@ -1,0 +1,23 @@
+.contact-door::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle,
+    rgba(53, 214, 192, 0.28),
+    transparent 65%
+  );
+}
+
+[data-reveal].in-view .contact-door-left {
+  transform: translateX(-102%);
+}
+
+[data-reveal].in-view .contact-door-right {
+  transform: translateX(102%);
+}
+
+.contact-door {
+  transition: transform 1.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: 0.35s;
+}

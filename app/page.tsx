@@ -6,6 +6,7 @@ import ElSistema from "./components/ElSistema/ElSistema";
 import Cases from "./components/Cases/Cases";
 import Servicios from "./components/Servicios/Servicios";
 import Equipo from "./components/Equipo/Equipo";
+import Contacto from "./components/Contacto/Contacto";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Cases />
       <Servicios />
       <Equipo />
+      <Contacto />
     </div>
   );
 }
