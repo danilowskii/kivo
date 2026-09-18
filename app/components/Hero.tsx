@@ -83,7 +83,7 @@ export default function Hero() {
       className="
         relative grid min-h-[100svh] place-items-center overflow-hidden
         bg-[radial-gradient(circle_at_72%_48%,rgba(53,214,192,.075),transparent_34rem),linear-gradient(180deg,#0B0F0F_0%,#111414_100%)]
-        px-6 py-[100px]
+        px-14 py-[100px]
         text-left
         max-[900px]:min-h-[900px]
         max-[700px]:flex max-[700px]:items-center
