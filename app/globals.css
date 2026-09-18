@@ -310,6 +310,10 @@ body {
 /* =========================
    MENU
    ========================= */
+.nav-inner {
+  position: relative;
+  overflow: hidden;
+}
 
 .nav-inner::after {
   content: "";
